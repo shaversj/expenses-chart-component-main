@@ -19,7 +19,7 @@ export default {
         "very-pale-orange": "hsl(33, 100%, 98%)"
       },
       fontFamily: {
-
+        'DM-Sans': ['DM Sans', 'sans-serif']
       }
     },
   },
