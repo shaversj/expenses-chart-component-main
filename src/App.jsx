@@ -1,3 +1,4 @@
+import BarChart from "./BarChart.jsx";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
               </header>
               <main>
                   <h1>Spending - Last 7 days</h1>
+                  <BarChart />
               </main>
           </div>
       </div>
