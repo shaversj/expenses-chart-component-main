@@ -17,8 +17,9 @@ export default {
         "medium-brown": "hsl(28, 10%, 53%)",
         "cream": "hsl(27, 66%, 92%)",
         "very-pale-orange": "hsl(33, 100%, 98%)",
-        "brown-divider": "hsl(33, 41% 92%)",
-        "chart-color": "hsl(37, 100% 98%)"
+        "brown-divider": "hsl(33, 41%, 92%)",
+        "chart-color": "hsl(37, 100%, 98%)",
+        "footer-color": "hsl(37, 4%, 51%)",
       },
       fontFamily: {
         'DM-Sans': ['DM Sans', 'sans-serif']
