@@ -91,7 +91,7 @@ const BarChart = () => {
   let width = window.innerWidth < 1440 ? "350px" : "460px";
 
   return (
-    <div className={"relative right-1.5 h-[260px] w-[315px] lg:w-[480px]  lg:h-[300px] lg:right-2.5"}>
+    <div role={"img"} aria-roledescription={"Bar chart to show spending of last 7 days"} className={"relative right-1.5 h-[260px] w-[315px] lg:w-[480px]  lg:h-[300px] lg:right-2.5"}>
       <Bar options={options} data={data} width={width} />
     </div>
   );
