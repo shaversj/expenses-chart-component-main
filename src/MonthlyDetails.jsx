@@ -1,7 +1,7 @@
 const MonthlyDetails = () => {
   return (
     <>
-      <h1 className={"my-6 h-[2.5px] border-t-0 bg-brown-divider opacity-100 dark:opacity-50"}></h1>
+      <h1 aria-label={"Dividing Line"} className={"my-6 h-[2.5px] border-t-0 bg-brown-divider opacity-100 dark:opacity-50"}></h1>
       <span className={"text-medium-brown font-light text-[15px] lg:text-lg lg:leading-10"}>Total this month</span>
       <div className={"flex items-center lg:pb-5"}>
         <h2 className={"text-[31px] font-bold text-dark-brown lg:text-[50px] lg:leading-4"}>$478.33</h2>
