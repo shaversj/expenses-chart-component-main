@@ -97,7 +97,7 @@ const BarChart = () => {
       aria-roledescription={"Bar chart to show spending of last 7 days"}
       className={"relative right-1.5 h-[260px] w-[315px] lg:w-[480px]  lg:h-[300px] lg:right-2.5"}
     >
-      <Bar options={options} data={data} width={width} />
+      <Bar aria-label={"Chart"} options={options} data={data} width={width} />
     </div>
   );
 };
