@@ -1,3 +1,4 @@
+import balanceLogo from "/src/assets/images/logo.svg";
 const Header = () => {
   return (
     <>
@@ -6,7 +7,7 @@ const Header = () => {
           <span className={"text-very-pale-orange font-extralight lg:text-[18px]"}>My balance</span>
           <h2 className={"text-[24px] text-very-pale-orange font-bold lg:text-[32px]"}>$921.48</h2>
         </div>
-        <img className={"w-[60px] lg:w-[72px] ml-auto sm:mr-1"} src={"./src/assets/images/logo.svg"} alt={""} />
+        <img className={"w-[60px] lg:w-[72px] ml-auto sm:mr-1"} src={balanceLogo} alt={"Logo"} />
       </header>
     </>
   );
