@@ -18,16 +18,14 @@ ChartJS.register(
     Legend
 );
 const BarChart = () => {
-    // const labels = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
-    // const data = [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48]
-
-
     const data = {
         labels: ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
 
         datasets: [{
             data: [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
-            borderRadius: 2,
+            borderRadius: 4,
+            borderSkipped: false,
+            barThickness: window.innerWidth < 1440 ? 32 : 50,
             backgroundColor: ["rgba(235, 118,94,1.000)", "rgba(235, 118,94,1.000)", "rgba(118,182,188,1.000)", "rgba(235, 118,94,1.000)", "rgba(235, 118,94,1.000)", "rgba(235, 118,94,1.000)", "rgba(235, 118,94,1.000)"]
         }]
     }
@@ -35,11 +33,14 @@ const BarChart = () => {
     const options = {
         scales: {
             x: {
+                border: {
+                    display: false
+                },
                 ticks: {
                     font: {
                         family: 'DM Sans',
-                        size: 12,
-                        color: 'black',
+                        size: window.innerWidth < 1440 ? 12 : 15,
+                        color: '#93867b',
                         weight: '300',
                     }
                 },
@@ -62,6 +63,12 @@ const BarChart = () => {
         maintainAspectRatio: false,
         responsive: true,
         plugins: {
+            tooltip: {
+                display: true,
+                callbacks: {
+                    title: () => null
+                }
+            },
             legend: {
                 display: false,
                 labels: {
@@ -73,21 +80,23 @@ const BarChart = () => {
             title: {
                 display: true,
                 align: 'start',
-                text: 'Spending - Last 7 days',
+                text: window.innerWidth < 1440 ? ' Spending - Last 7 days': ' Spending - Last 7 days',
                 color: '#2c1c10',
                 font: {
                     family: 'DM Sans',
-                    size: 24,
+                    size: window.innerWidth < 1440 ? 24: 33,
                     weight: 'bold',
                     lineHeight: 1.2,
                 },
-                padding: {bottom: 28}
+                padding: window.innerWidth < 1440 ? {bottom: 28, top:5} : {bottom: 40, top: 10}
             },
         },
     };
 
+    let width = window.innerWidth < 1440 ? "350px" : "460px"
+
     return (
-        <Bar options={options} data={data} />
+        <Bar options={options} data={data} width={width}/>
     );
 };
 
